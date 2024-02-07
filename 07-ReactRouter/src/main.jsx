@@ -6,6 +6,8 @@ import Home from './components/Home/Home'
 import About from './components/about/about'
 import Contact from './components/contact/Contact'
 import Layout from './layout'
+import User from './components/user/User'
+import Github, { githubInfoLoader } from './components/github/GIthub'
 
 
 // const route=
@@ -35,6 +37,11 @@ const route=createBrowserRouter(createRoutesFromElements(
     <Route path='' element={<Home />} />
     <Route path='about' element={<About />} />
     <Route path='contact' element={<Contact />} />
+    <Route path='user/:userid' element={<User />} />
+    <Route 
+    loader={githubInfoLoader}
+    path='github' 
+    element={<Github />} />
   </Route>
 ))
 
