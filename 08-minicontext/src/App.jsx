@@ -1,13 +1,13 @@
 import Login from "./components/Login";
 import Profile from "./components/profile";
+import UserContextProvider from "./context/userContextProvider";
 
 export default function App() {
   return (
-    <>
-      <h1>hey</h1>
+    <UserContextProvider>
       <Login />
       <Profile />
-    </>
+    </UserContextProvider>
   )
 }
 
