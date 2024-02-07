@@ -4,7 +4,7 @@ import UserContextProvider from "./context/userContextProvider";
 
 export default function App() {
   return (
-    <UserContextProvider>
+    <UserContextProvider >
       <Login />
       <Profile />
     </UserContextProvider>
