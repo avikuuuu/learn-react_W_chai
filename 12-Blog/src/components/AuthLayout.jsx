@@ -4,7 +4,7 @@ import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 
 
-export default function Protected({children,authentication=true}) {
+ function Protected({children,authentication=true}) {
 
     const  navigate=useNavigate()
     const [loader,setLoder]=useState(true)
@@ -26,3 +26,4 @@ export default function Protected({children,authentication=true}) {
 }
 
  
+export default Protected

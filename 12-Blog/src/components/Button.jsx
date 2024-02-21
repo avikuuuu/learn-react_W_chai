@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 
-export default function Button({
+ function Button({
     children,
     type = 'button',
     bgColor = 'bg-blue-600',
@@ -14,3 +14,5 @@ export default function Button({
 
     )
 }
+
+export default Button

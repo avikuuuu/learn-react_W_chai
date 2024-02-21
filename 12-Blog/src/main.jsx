@@ -7,14 +7,16 @@ import { Provider } from 'react-redux'
 import React from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './pages/Home.jsx'
-import { AuthLayout, Login, SignUp } from './components/index.js'
+import { AuthLayout,Login } from './components/index.js'
 import AllPost from './pages/AllPost.jsx'
 import AddPost from './pages/AddPost.jsx'
 import EditPost from './pages/EditPost.jsx'
 import Post from "./pages/Post";
+import Signup from './pages/Signup.jsx'
 
 
-const router = createBrowserRouter({
+
+const router = createBrowserRouter([{
   path: '/',
   element: <App />,
   children: [
@@ -32,7 +34,7 @@ const router = createBrowserRouter({
     , {
       path: '/signup',
       element: <AuthLayout authentication={false}>
-        <SignUp />
+        <Signup />
       </AuthLayout>
 
     }
@@ -66,7 +68,7 @@ const router = createBrowserRouter({
       element: <Post />,
   },
   ]
-})
+}])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
